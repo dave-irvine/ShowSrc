@@ -80,6 +80,10 @@ function showSrc(callback) {
         return new Request();
     };
 
+/*
+	Borrowed from http://snipplr.com/view/28115/getelementsbyattribute/
+	No licence attached.
+*/
     var getElementsByAttribute = function( attrib, value, context_node, tag ) {
         var nodes = [];
         if ( context_node == null )
