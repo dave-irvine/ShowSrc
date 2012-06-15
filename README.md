@@ -4,6 +4,13 @@ ShowSrc
 If you need to show the source of a script you've included in your page, but
 didn't know where to turn, now you do!
 
+Demo
+----
+
+Sure, why not. http://dave-irvine.github.com/ShowSrc/
+
+Click the button. Enjoy.
+
 Usage
 -----
 
