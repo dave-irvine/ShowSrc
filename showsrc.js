@@ -60,10 +60,7 @@ function showSrc(callback) {
 		return nodes;
 	};
 
-	var elems = getElementsByAttribute("data-showsrc", null, document.body, "script");
-	var done = 0;
-	for(var e = 0, len = elems.length; e < len; e += 1) {
-		var element = elems[e];
+	var getSource = function(element) {
 		new Ajax(element.src).done(function (data) {
 			var pre = document.createElement('pre');
 			pre.innerHTML = data;
@@ -87,6 +84,13 @@ function showSrc(callback) {
 			done++;
 			checkDone();
 		});
+	};
+
+	var elems = getElementsByAttribute("data-showsrc", null, document.body, "script");
+	var done = 0;
+	for(var e = 0, len = elems.length; e < len; e += 1) {
+		var element = elems[e];
+		getSource(element);
 	}
 
 	var checkDone = function() {
